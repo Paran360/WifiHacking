@@ -4,7 +4,6 @@ A termux tool to get password of any WPS enabled router.
 ## Wifi_Hacking
 ### Hack WIfi Using Termux! (Requires Root)
 
-<p align="center"><img src="https://i.ibb.co/K74g0SC/hulu.jpg"></p>
 
 ### Installation :
 
