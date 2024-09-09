@@ -429,8 +429,8 @@ class Companion:
         self.connection_status = ConnectionStatus()
 
         user_home = str(pathlib.Path.home())
-        self.sessions_dir = f'{user_home}/.BiRi/sessions/'
-        self.pixiewps_dir = f'{user_home}/.BiRi/pixiewps/'
+        self.sessions_dir = f'{user_home}/.paran/sessions/'
+        self.pixiewps_dir = f'{user_home}/.paran/pixiewps/'
         self.reports_dir = os.path.dirname(os.path.realpath(__file__)) + '/reports/'
         if not os.path.exists(self.sessions_dir):
             os.makedirs(self.sessions_dir)
@@ -789,7 +789,7 @@ class Companion:
                 self.__second_half_bruteforce(bssid, f_half, s_half, delay)
             raise KeyboardInterrupt
         except KeyboardInterrupt:
-            print("\nAborting…\nStay With\nTHBD")
+            print("\nAborting…\nStay With\nParan Boss")
             filename = self.sessions_dir + '{}.run'.format(bssid.replace(':', '').upper())
             with open(filename, 'w') as file:
                 file.write(self.bruteforce.mask)
@@ -1033,7 +1033,7 @@ def die(msg):
 
 def usage():
     return """
-OneShotPin 0.0.2 (c) 2017 rofl0r, modded by BiRi_B@B@
+OneShotPin 0.0.2 (c) 2017 rofl0r, modded by paran_B@B@
 
 %(prog)s <arguments>
 
@@ -1066,7 +1066,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(
-        description='OneShotPin 0.0.2 (c) 2017 rofl0r, modded by BiRi_B@B@',
+        description='OneShotPin 0.0.2 (c) 2017 rofl0r, modded by paran_B@B@',
         epilog='Example: %(prog)s -i wlan0 -b 00:90:4C:C1:AC:21 -K'
         )
 
@@ -1180,7 +1180,7 @@ if __name__ == '__main__':
         except KeyboardInterrupt:
             if args.loop:
                 if input("\n[?] Exit the script (otherwise continue to AP scan)? [N/y] ").lower() == 'y':
-                    print("Aborting…\nStay With\nTHBD")
+                    print("Aborting…\nStay With\nParan Boss")
                     break
                 else:
                     args.bssid = None
